@@ -42,6 +42,9 @@ const Control = (props) => {
         <div>
             <Menu menu1={"Manage"} menu2={"Password"} />
         </div>
+        <div>
+          <p>Door state: {`${controller}`}</p>
+        </div>
         <div className="status-box">
             <Button className="status" size="lg" variant="outline-success">OPEN</Button>{' '}
             <Button className="status" size="lg" variant="outline-danger">CLOSE</Button>{' '}
