@@ -12,11 +12,11 @@ const Register = () => {
 
         <br/>
         <form class="form" method="post" action="yourpage.html">
-          <input type="text" class="name" placeholder="Key Name"/>
-          <input type="email" class="email" placeholder="Key Password"/>
+          <input type="name" class="name" placeholder="Key Name"/>
+          <input type="name" class="pass" placeholder="Key Password"/>
         <br/>
         <br/>
-          <input type="submit" class="submit" value="Register"/>
+          <input type="submit" class="submit" value="OK"/>
         </form>
       </div>
     </div>
