@@ -1,12 +1,12 @@
 body   
-  .wrapper {
+  .component {
     width: 500px;
     height: 320px;
     margin: auto;
     border-radius: 20px;
     box-shadow: 0px 0px 10px #5b5b5d;
   }
-  .register{
+  .reset{
     margin-top: 10%;
   }
   html{

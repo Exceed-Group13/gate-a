@@ -1,9 +1,9 @@
 import React from 'react'
-import '../styles/Register.css'
+import '../styles/ResetPass.css'
 
 const Register = () => {
   return (
-    <div className="register">
+    <div className="reset">
       <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'/>
       <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
       <div class="component">
