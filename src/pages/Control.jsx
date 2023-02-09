@@ -47,8 +47,8 @@ const Control = (props) => {
             <Button className="status" size="lg" variant="outline-danger">CLOSE</Button>{' '}
         </div>
         <div className="switch-box">
-            <Button className="switch-but" size="lg" variant="primary" onClick={() => manageSwitch("true", "house1")}>ON</Button>{' '}
-            <Button className="switch-but" size="lg" variant="primary">OFF</Button>{' '}
+            <Button className="switch-but" size="lg" variant="primary" onClick={() => manageSwitch("true", "house1")}>OPEN</Button>{' '}
+            <Button className="switch-but" size="lg" variant="primary" onClick={() => manageSwitch("false", "house1")}>OFF</Button>{' '}
         </div>
     </>
   );
