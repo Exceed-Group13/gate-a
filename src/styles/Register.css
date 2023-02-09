@@ -1,8 +1,4 @@
-/*dark background to support form theme*/
 body   
-  
-  /*sass variables used*/
-  /*site container*/
   .wrapper {
     width: 500px;
     height: 320px;
@@ -38,7 +34,7 @@ body
     width: 100%;
   }
   
-  input[type=name],[type=pass]{
+  .input-name, .input-pass{
     width: 80%;
     padding: 15px 0px 15px 8px;
     border-radius: 5px;

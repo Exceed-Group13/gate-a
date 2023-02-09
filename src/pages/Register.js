@@ -12,8 +12,8 @@ const Register = () => {
 
         <br/>
         <form class="form" method="post" >
-          <input type="text" class="name" placeholder="Key Name"/>
-          <input type="email" class="email" placeholder="Key Password"/>
+          <input className='input-name' placeholder="Key Name"/>
+          <input className='input-pass' placeholder="Key Password"/>
         <br/>
         <br/>
           <input type="submit" class="submit" value="OK"/>
