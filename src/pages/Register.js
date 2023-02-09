@@ -16,7 +16,7 @@ const Register = () => {
           <input type="email" class="email" placeholder="Key Password"/>
         <br/>
         <br/>
-          <input type="submit" class="submit" value="Register"/>
+          <input type="submit" class="submit" value="OK"/>
         </form>
       </div>
     </div>

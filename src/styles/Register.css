@@ -4,7 +4,8 @@ body
   /*sass variables used*/
   /*site container*/
   .wrapper {
-    width: 420px;
+    width: 500px;
+    height: 320px;
     margin: auto;
     border-radius: 20px;
     box-shadow: 0px 0px 10px #5b5b5d;
@@ -37,8 +38,8 @@ body
     width: 100%;
   }
   
-  input[type=text], input[type=email] {
-    width: 98%;
+  input[type=name],[type=pass]{
+    width: 80%;
     padding: 15px 0px 15px 8px;
     border-radius: 5px;
     box-shadow: inset 4px 6px 10px -4px rgba(0, 0, 0, 0.3), 0 1px 1px -1px rgba(255, 255, 255, 0.3);
@@ -50,9 +51,9 @@ body
     color: #6E6E6E;
     text-shadow: #000 0px 1px 5px;
   }
-  
+
   input[type=submit] {
-    width: 100%;
+    width: 95%;
     padding: 15px;
     border-radius: 5px;
     outline: none;
