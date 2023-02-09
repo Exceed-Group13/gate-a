@@ -41,6 +41,7 @@ const Register = () => {
           />
           <input
             className="input-pass"
+            type="password"
             placeholder="Key Password"
             value={keyPassword}
             onChange={(e) => setKeyPassword(e.target.value)}
