@@ -1,5 +1,5 @@
 body   
-  .component {
+  .component{
     width: 500px;
     height: 320px;
     margin: auto;
@@ -34,7 +34,7 @@ body
     width: 100%;
   }
   
-  .Old-Pass, .New-Pass{
+  .old-Pass, .new-Pass{
     width: 80%;
     padding: 15px 0px 15px 8px;
     border-radius: 5px;
