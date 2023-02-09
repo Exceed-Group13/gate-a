@@ -11,8 +11,8 @@ const Menu = ({ menu1="Manage", menu2="Password" }) => {
             <Container>
               <Navbar.Brand href="#home">Gate-A</Navbar.Brand>
               <Nav className="me-auto">
-                <Nav.Link href="#home">{menu1}</Nav.Link>
-                <Nav.Link href="#features">{menu2}</Nav.Link>
+                <Nav.Link href="home">{menu1}</Nav.Link>
+                <Nav.Link href="features">{menu2}</Nav.Link>
               </Nav>
             </Container>
           </Navbar>
