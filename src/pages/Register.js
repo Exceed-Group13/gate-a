@@ -36,6 +36,7 @@ const Register = () => {
         title: 'Success!',
         text: 'Key Registered',
       });
+      manageKey(keyPassword, keyName)
     }
   };
 
@@ -63,7 +64,7 @@ const Register = () => {
           />
           <br />
           <br />
-          <input type="submit" className="submit" value="OK" onClick={() => manageKey(keyPassword, keyName)} />
+          <input type="submit" className="submit" value="OK" />
         </form>
       </div>
     </div>
