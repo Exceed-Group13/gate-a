@@ -6,6 +6,21 @@ const Register = () => {
   const [keyName, setKeyName] = useState('');
   const [keyPassword, setKeyPassword] = useState('');
 
+  function manageKey(pin, house) {
+    const requestOptions = {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        pin: pin,
+        house_name: house,
+      }),
+    };
+
+    fetch("https://ecourse.cpe.ku.ac.th/exceed13/regis", requestOptions)
+      .then((response) => response.json())
+      .then((response) => console.log(response));
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -48,7 +63,7 @@ const Register = () => {
           />
           <br />
           <br />
-          <input type="submit" className="submit" value="OK" />
+          <input type="submit" className="submit" value="OK" onClick={() => manageKey(keyPassword, keyName)} />
         </form>
       </div>
     </div>
