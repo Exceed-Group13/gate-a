@@ -58,8 +58,12 @@ const Register = () => {
           <input
             className="input-pass"
             type="password"
+            inputmode="numeric"
+            pattern="[1-3]{3}"
             placeholder="Key Password"
             value={keyPassword}
+            maxLength="3"
+            minLength="3"
             onChange={(e) => setKeyPassword(e.target.value)}
           />
           <br />
