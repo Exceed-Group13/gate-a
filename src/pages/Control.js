@@ -12,6 +12,14 @@ const Control = (props) => {
   const URL = "https://ecourse.cpe.ku.ac.th/exceed13/home"
   
   useEffect(()=>{
+    fetch(URL).then((response) => response.json()).then((response) => {
+      setData(response.result); 
+      console.log(response)
+      console.log(data)
+    })
+  })
+  
+  useEffect(()=>{
     settingTime(1)
 
     return () => {

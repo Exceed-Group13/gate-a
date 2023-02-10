@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 const Menu = ({ menu1="Manage", menu2="Password" }) => {
     const navigate = useNavigate();
     return (
-        <div className="navDiv">
+        // <div className="navDiv">
           <Navbar variant="dark" style={{backgroundColor: 'black'}}>
             <Container>
               <Navbar.Brand href="#home">Gate-A</Navbar.Brand>
@@ -21,7 +21,7 @@ const Menu = ({ menu1="Manage", menu2="Password" }) => {
               </Nav>
             </Container>
           </Navbar>
-        </div>
+        // </div>
       );
 }
 
