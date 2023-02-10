@@ -1,13 +1,16 @@
 import React, { useState } from 'react'
 import Swal from 'sweetalert2'
-import '../styles/Register.css'
+import '../styles/ResetPass.css'
 
 const Changepass = () => {
   const [oldPassword, setOldPassword] = useState('')
   const [newPassword, setNewPassword] = useState('')
+  const [confirmPassword, setConfirmPassword] = useState('')
+
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    console.log(!"")
 
     if (!oldPassword || !newPassword) {
       Swal.fire({
@@ -15,7 +18,16 @@ const Changepass = () => {
         title: 'Oops...',
         text: 'Please enter both the old password and the new password',
       })
-    } else {
+      return
+    } else if (newPassword !== confirmPassword) {
+      Swal.fire({
+        icon: 'warning',
+        title: 'Oops...',
+        text: 'Please enter both password the same',
+      })
+    }
+    
+    else {
       Swal.fire({
         icon: 'success',
         title: 'Password Changed',
@@ -29,13 +41,13 @@ const Changepass = () => {
       <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'/>
       <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
       <div class="wrapper">
-        <h1>Reset Password</h1>
+        <h1 className='setH1'>Reset Password</h1>
         <br/>
 
         <br/>
         <form class="form" method="post" onSubmit={handleSubmit}>
           <input 
-            className='input-name' 
+            className='old-Pass' 
             placeholder="Old password"
             value={oldPassword}
             onChange={(e) => setOldPassword(e.target.value)}
@@ -45,6 +57,12 @@ const Changepass = () => {
             placeholder="New Password"
             value={newPassword}
             onChange={(e) => setNewPassword(e.target.value)}
+          />
+          <input 
+            className='input-pass' 
+            placeholder="Confirm Password"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
           />
         <br/>
         <br/>

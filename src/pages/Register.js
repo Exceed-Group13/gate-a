@@ -47,12 +47,12 @@ const Register = () => {
       <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css' />
       <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
       <div className="wrapper">
-        <h1>Register Key</h1>
+        <h1 className='setH1'>Register Key</h1>
         <br />
         <br />
         <form className="form" method="post" onSubmit={handleSubmit}>
           <input
-            className="input-name"
+            className="input_name"
             placeholder="Key Name"
             value={keyName}
             onChange={(e) => setKeyName(e.target.value)}

@@ -52,13 +52,11 @@ const Control = (props) => {
           <h1 className={data[0]['state'] ? "open-text" : "close-text"}>{data[0]['state'] ? "Open" : "Close"}</h1>
         </div>
         <div className="switch-box">
-            <Button className="switch-but" size="lg" onClick={() => manageSwitch("true", data[0]['house_name'])}>OPEN</Button>{' '}
-            <Button className="switch-but" size="lg" onClick={() => manageSwitch("false", data[0]['house_name'])}>CLOSE</Button>{' '}
+            <Button className="switch-but" size="lg" variant="primary" onClick={() => manageSwitch("true", data[0]['house_name'])}>OPEN</Button>{' '}
+            <Button className="switch-but" size="lg" variant="primary" onClick={() => manageSwitch("false", data[0]['house_name'])}>OFF</Button>{' '}
         </div>
-      </div>
     </>
   );
 };
 
 export default Control;
-
