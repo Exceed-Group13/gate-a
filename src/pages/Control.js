@@ -42,7 +42,9 @@ const Control = (props) => {
   return data && (
     <>
         <div>
+          <div className="navDiv">
             <Menu menu1={"Manage"} menu2={"Password"} />
+          </div>
         </div>
         <div>
           <p>Door state: {`${data[0]['state']}`}</p>
