@@ -12,10 +12,12 @@ const Control = (props) => {
     fetch(URL).then((response) => response.json()).then((response) => {
       setData(response.result); 
       console.log(response)
+      console.log(data)
     })
   })
   
   useEffect(() => {
+    console.log(props.data)
     if (props.data) {
       setController(props.data.state);
       console.log(controller);
@@ -34,7 +36,7 @@ const Control = (props) => {
 
     fetch("https://ecourse.cpe.ku.ac.th/exceed13/home", requestOptions)
       .then((response) => response.json())
-      .then((response) => setData({ postId: data.id }));
+      .then((response) => console.log(response));
   }
 
   return data && (
@@ -42,9 +44,13 @@ const Control = (props) => {
         <div className="navDiv">
             <Menu menu1={"Manage"} menu2={"Password"} />
         </div>
-        {/* <div>
-          <p>Door state: {`${controller}`}</p>
-        </div> */}
+        <div>
+          <p>Door state: {`${data[0]['state']}`}</p>
+        </div>
+        <div className="status-box">
+            <Button className="status" size="lg" variant="outline-success">OPEN</Button>{' '}
+            <Button className="status" size="lg" variant="outline-danger">CLOSE</Button>{' '}
+        </div>
         <div className="switch-box">
             <Button className="switch-but" size="lg" onClick={() => manageSwitch("true", "house1")}>OPEN</Button>{' '}
             <Button className="switch-but" size="lg" onClick={() => manageSwitch("false", "house1")}>CLOSE</Button>{' '}
