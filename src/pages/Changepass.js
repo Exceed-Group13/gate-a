@@ -7,13 +7,21 @@ const Changepass = () => {
   const [newPassword, setNewPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
 
-  // function checkPasswword(keyPassword,e){
-  //   if ((e.target.value).length == 0 || e.target.value.charCodeAt((e.target.value).length-1) === 49 || e.target.value.charCodeAt((e.target.value).length-1) === 50 || e.target.value.charCodeAt((e.target.value).length-1) === 51) {
-  //       setNewPassword(e.target.value)
-  //   } else {
-  //     setNEwPassword(keyPassword)
-  //   }
-  // }
+  function checkNewPassword(newPassword,e){
+    if ((e.target.value).length == 0 || e.target.value.charCodeAt((e.target.value).length-1) === 49 || e.target.value.charCodeAt((e.target.value).length-1) === 50 || e.target.value.charCodeAt((e.target.value).length-1) === 51) {
+        setNewPassword(e.target.value)
+    } else {
+      setNewPassword(newPassword)
+    }
+  }
+
+  function checkConfirmPassword(confirmPassword,e){
+    if ((e.target.value).length == 0 || e.target.value.charCodeAt((e.target.value).length-1) === 49 || e.target.value.charCodeAt((e.target.value).length-1) === 50 || e.target.value.charCodeAt((e.target.value).length-1) === 51) {
+        setConfirmPassword(e.target.value)
+    } else {
+      setConfirmPassword(confirmPassword)
+    }
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -60,13 +68,13 @@ const Changepass = () => {
             className='input-pass' 
             placeholder="New Password"
             value={newPassword}
-            onChange={(e) => setNewPassword(e.target.value)}
+            onChange={(e) => checkNewPassword(newPassword,e)}
           />
           <input 
             className='input-confirm' 
             placeholder="Confirm Password"
             value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
+            onChange={(e) => checkConfirmPassword(confirmPassword, e)}
           />
         <br/>
         <br/>
