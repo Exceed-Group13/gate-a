@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import DurationPicker from 'react-duration-picker'
 import '../styles/Profile.css'
+import Menu from "../components/Menu";
 
 
 
@@ -20,7 +21,11 @@ const onDurationChange = duration => {
   };
 
     return (
+    
     <div className="reset">
+      <div>
+            <Menu menu1={"Manage"} menu2={"Password"} />
+        </div>
       <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'/>
       <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
       <div class="component">
