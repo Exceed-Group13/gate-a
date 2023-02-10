@@ -73,6 +73,7 @@ const Register = () => {
             type="password"
             inputmode="numeric"
             placeholder="Key Password"
+            maxLength={3}
             value={keyPassword}
             onChange={(e) => checkPasswword(keyPassword,e)}
           />
