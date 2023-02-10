@@ -41,21 +41,22 @@ const Control = (props) => {
 
   return data && (
     <>
-    <div className="demo">
-        <div className="navDiv">
+        <div>
             <Menu menu1={"Manage"} menu2={"Password"} />
         </div>
-        <div className="doorDiv">
-          <h1>{data[0]['state'] ? "Open" : "Close"}</h1>
+        <div>
+          <p>Door state: {`${data[0]['state']}`}</p>
+        </div>
+        <div className="status-box">
+            <Button className="status" size="lg" variant="outline-success">OPEN</Button>{' '}
+            <Button className="status" size="lg" variant="outline-danger">CLOSE</Button>{' '}
         </div>
         <div className="switch-box">
-            <Button className="switch-but" size="lg" onClick={() => manageSwitch("true", "house1")}>OPEN</Button>{' '}
-            <Button className="switch-but" size="lg" onClick={() => manageSwitch("false", "house1")}>CLOSE</Button>{' '}
+            <Button className="switch-but" size="lg" variant="primary" onClick={() => manageSwitch("true", data[0]['house_name'])}>OPEN</Button>{' '}
+            <Button className="switch-but" size="lg" variant="primary" onClick={() => manageSwitch("false", data[0]['house_name'])}>OFF</Button>{' '}
         </div>
-      </div>
     </>
   );
 };
 
 export default Control;
-
