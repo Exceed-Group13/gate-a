@@ -11,7 +11,7 @@ const Register = () => {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        pin: pin,
+        pin: [...pin].map(str => {return parseInt(str, 10)}),
         house_name: house,
       }),
     };
