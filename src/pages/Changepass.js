@@ -110,7 +110,7 @@ const Changepass = () => {
         <form class="form" method="post" onSubmit={(ev) => handleSubmit(ev)}>
           <input 
             className='input-name' 
-            // type="password"
+            type="password"
             placeholder="Old password"
             value={oldPassword}
             onChange={(e) => checkOldPassword(oldPassword, e)}
@@ -119,7 +119,7 @@ const Changepass = () => {
           />
           <input 
             className='input-pass' 
-            // type="password"
+            type="password"
             placeholder="New Password"
             value={newPassword}
             onChange={(e) => checkNewPassword(newPassword,e)}
@@ -128,7 +128,7 @@ const Changepass = () => {
           />
           <input 
             className='input-confirm' 
-            // type="password"
+            type="password"
             placeholder="Confirm Password"
             value={confirmPassword}
             onChange={(e) => checkConfirmPassword(confirmPassword, e)}
