@@ -7,7 +7,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 const Menu = ({ menu1="Manage", menu2="Password" }) => {
     return (
         <>
-          <Navbar bg="primary" variant="dark">
+          <Navbar variant="dark">
             <Container>
               <Navbar.Brand href="#home">Gate-A</Navbar.Brand>
               <Nav className="me-auto">

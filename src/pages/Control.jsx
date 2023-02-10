@@ -39,19 +39,15 @@ const Control = (props) => {
 
   return data && (
     <>
-        <div>
+        <div className="navDiv">
             <Menu menu1={"Manage"} menu2={"Password"} />
         </div>
-        <div>
+        {/* <div>
           <p>Door state: {`${controller}`}</p>
-        </div>
-        <div className="status-box">
-            <Button className="status" size="lg" variant="outline-success">OPEN</Button>{' '}
-            <Button className="status" size="lg" variant="outline-danger">CLOSE</Button>{' '}
-        </div>
+        </div> */}
         <div className="switch-box">
-            <Button className="switch-but" size="lg" variant="primary" onClick={() => manageSwitch("true", "house1")}>OPEN</Button>{' '}
-            <Button className="switch-but" size="lg" variant="primary" onClick={() => manageSwitch("false", "house1")}>OFF</Button>{' '}
+            <Button className="switch-but" size="lg" onClick={() => manageSwitch("true", "house1")}>OPEN</Button>{' '}
+            <Button className="switch-but" size="lg" onClick={() => manageSwitch("false", "house1")}>CLOSE</Button>{' '}
         </div>
     </>
   );
