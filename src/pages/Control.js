@@ -91,20 +91,18 @@ const Control = (props) => {
 
   return data && (
     <>
-        <div>
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css' />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <div className="demo">
             <Menu menu1={"Manage"} menu2={"Password"} />
-        </div>
-        <div>
-          <p>Door state: {`${data[0]['state']}`}</p>
-        </div>
-        <div className="status-box">
-            <Button className="status" size="lg" variant="outline-success">OPEN</Button>{' '}
-            <Button className="status" size="lg" variant="outline-danger">CLOSE</Button>{' '}
+        <div className="doorDiv">
+          <h1 className={data[0]['state'] ? "open-text" : "close-text"}>{data[0]['state'] ? "Open" : "Close"}</h1>
         </div>
         <div className="switch-box">
             <Button className="switch-but" size="lg" variant="primary" onClick={() => manageSwitch("true", data[0]['house_name'])}>OPEN</Button>{' '}
             <Button className="switch-but" size="lg" variant="primary" onClick={() => manageSwitch("false", data[0]['house_name'])}>OFF</Button>{' '}
         </div>
+      </div>
     </>
   );
 };
