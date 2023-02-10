@@ -1,10 +1,14 @@
 body   
   .component{
     width: 500px;
-    height: 360px;
+    height: 320px;
     margin: auto;
     border-radius: 20px;
     box-shadow: 0px 0px 10px #5b5b5d;
+  }
+
+  .wrapper {
+    height: 440px;
   }
   .reset{
     margin-top: 10%;

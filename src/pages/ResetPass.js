@@ -6,12 +6,12 @@ const Register = () => {
     <div className="register">
       <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'/>
       <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
-      <div class="wrapper">
+      <div className='wrapper'>
         <h1 className='setH1'>Reset Password</h1>
         <br/>
 
         <br/>
-        <form class="form" method="post" >
+        <form className="form" method="post" >
           <input className='old-Pass' placeholder="Old password"/>
           <input className='input-pass' placeholder="New Password"/>
         <br/>
