@@ -7,14 +7,29 @@ const Changepass = () => {
   const [newPassword, setNewPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
 
+  // function checkPasswword(keyPassword,e){
+  //   if ((e.target.value).length == 0 || e.target.value.charCodeAt((e.target.value).length-1) === 49 || e.target.value.charCodeAt((e.target.value).length-1) === 50 || e.target.value.charCodeAt((e.target.value).length-1) === 51) {
+  //       setNewPassword(e.target.value)
+  //   } else {
+  //     setNEwPassword(keyPassword)
+  //   }
+  // }
+
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    if (!oldPassword || !newPassword) {
+    if (!oldPassword || !newPassword || !confirmPassword) {
       Swal.fire({
         icon: 'error',
         title: 'Oops...',
         text: 'Please enter both the old password and the new password',
+      })
+    }
+    else if (oldPassword == newPassword) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Your new password cannot be the same as old password',
       })
     } else {
       Swal.fire({
