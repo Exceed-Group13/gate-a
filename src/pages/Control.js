@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Menu from "../components/Menu";
 import Button from 'react-bootstrap/Button';
-// import '../styles/Control.css'
+import '../styles/Control.css'
 
 const Control = (props) => {
   const [controller, setController] = useState(false);
