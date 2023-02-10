@@ -12,10 +12,12 @@ const Control = (props) => {
     fetch(URL).then((response) => response.json()).then((response) => {
       setData(response.result); 
       console.log(response)
+      // console.log(props)
     })
   })
   
   useEffect(() => {
+    console.log(props.data)
     if (props.data) {
       setController(props.data.state);
       console.log(controller);
@@ -34,7 +36,7 @@ const Control = (props) => {
 
     fetch("https://ecourse.cpe.ku.ac.th/exceed13/home", requestOptions)
       .then((response) => response.json())
-      .then((response) => setData({ postId: data.id }));
+      .then((response) => setController(state));
   }
 
   return data && (
