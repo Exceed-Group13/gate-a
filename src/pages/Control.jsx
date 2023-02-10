@@ -12,7 +12,7 @@ const Control = (props) => {
     fetch(URL).then((response) => response.json()).then((response) => {
       setData(response.result); 
       console.log(response)
-      // console.log(props)
+      console.log(data)
     })
   })
   
@@ -36,7 +36,7 @@ const Control = (props) => {
 
     fetch("https://ecourse.cpe.ku.ac.th/exceed13/home", requestOptions)
       .then((response) => response.json())
-      .then((response) => setController(state));
+      .then((response) => console.log(response));
   }
 
   return data && (
@@ -45,7 +45,7 @@ const Control = (props) => {
             <Menu menu1={"Manage"} menu2={"Password"} />
         </div>
         <div>
-          <p>Door state: {`${controller}`}</p>
+          <p>Door state: {`${data[0]['state']}`}</p>
         </div>
         <div className="status-box">
             <Button className="status" size="lg" variant="outline-success">OPEN</Button>{' '}
