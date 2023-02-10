@@ -13,7 +13,6 @@ function App() {
       <Routes>
         <Route path="/changepass" element={<Changepass />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/resetpass" element={<ResetPass />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/" element={<Control />} />
       </Routes>
