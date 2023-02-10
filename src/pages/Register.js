@@ -35,7 +35,9 @@ const Register = () => {
         icon: 'success',
         title: 'Success!',
         text: 'Key Registered',
-      });
+      }).then(function() {
+        window.location = "/";
+    });
       manageKey(keyPassword, keyName)
     }
   };
