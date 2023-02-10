@@ -8,7 +8,7 @@ import { NavLink } from "react-router-dom";
 
 const Menu = ({ menu1="Manage", menu2="Password" }) => {
     return (
-        <>
+        <div className="navDiv">
           <Navbar variant="dark">
             <Container>
               <Navbar.Brand href="#home">Gate-A</Navbar.Brand>
@@ -20,7 +20,7 @@ const Menu = ({ menu1="Manage", menu2="Password" }) => {
               </Nav>
             </Container>
           </Navbar>
-        </>
+        </div>
       );
 }
 
