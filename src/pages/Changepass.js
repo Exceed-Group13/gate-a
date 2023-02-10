@@ -5,6 +5,7 @@ import '../styles/Register.css'
 const Changepass = () => {
   const [oldPassword, setOldPassword] = useState('')
   const [newPassword, setNewPassword] = useState('')
+  const [confirmPassword, setConfirmPassword] = useState('')
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -45,6 +46,12 @@ const Changepass = () => {
             placeholder="New Password"
             value={newPassword}
             onChange={(e) => setNewPassword(e.target.value)}
+          />
+          <input 
+            className='input-confirm' 
+            placeholder="Confirm Password"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
           />
         <br/>
         <br/>
