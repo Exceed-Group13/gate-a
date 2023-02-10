@@ -41,12 +41,15 @@ const Control = (props) => {
 
   return data && (
     <>
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css' />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
     <div className="demo">
+      
         <div className="navDiv">
             <Menu menu1={"Manage"} menu2={"Password"} />
         </div>
         <div className="doorDiv">
-          <h1>{data[0]['state'] ? "Open" : "Close"}</h1>
+          <h1 className={data[0]['state'] ? "open-text" : "close-text"}>{data[0]['state'] ? "Open" : "Close"}</h1>
         </div>
         <div className="switch-box">
             <Button className="switch-but" size="lg" onClick={() => manageSwitch("true", data[0]['house_name'])}>OPEN</Button>{' '}
