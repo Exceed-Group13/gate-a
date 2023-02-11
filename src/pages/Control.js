@@ -113,7 +113,7 @@ const Control = (props) => {
             <Menu menu1={"Manage"} menu2={"Password"} />
         <div className="doorDiv">
           <h1 className={data[0]['state'] ? "open-text" : "close-text"}>{data[0]['state'] ? "Open" : "Close"}</h1>
-          {data[0]['state'] ? <img src="https://i.ibb.co/FqMKGR3/Untitled-design-2.png" alt="Open door" style={{width:'50%'}} /> : <img src="https://i.ibb.co/QMRV82x/Untitled-design-3.png" alt="Close door" style={{width:'50%'}}/>}
+          {data[0]['state'] ? <img src="https://i.ibb.co/FqMKGR3/Untitled-design-2.png" alt="Open door" style={{width:'30%'}} /> : <img src="https://i.ibb.co/QMRV82x/Untitled-design-3.png" alt="Close door" style={{width:'30%'}}/>}
         </div>
         <div className="switch-box">
             <Button className="switch-but" style={{margin:'18px'}} size="lg" variant="primary" onClick={() => manageSwitch("true", data[0]['house_name'])}>OPEN</Button>{' '}

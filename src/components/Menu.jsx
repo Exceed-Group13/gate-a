@@ -20,8 +20,8 @@ const Menu = ({ menu1="Manage", menu2="Password" }) => {
         <div className="navDiv">
           <Navbar variant="dark">
             <Container>
-              <Nav.Link onClick={()=> navigate('/')}>
-              <img src="https://i.ibb.co/TMPSnkm/GATE-A-125-125-px-4.png" style={{width:'60%', float: 'left'}}></img>
+            <img src="https://i.ibb.co/zXZRxXB/Illustrated-Thank-You-Followers-Instagram-Post.png" style={{width:'8%', float: 'left'}} onClick={()=> navigate('/')} />              
+            <Nav.Link onClick={()=> navigate('/')}>
               </Nav.Link>
               <Nav className="me-auto">
                 <Nav.Link onClick={()=> navigate(`/${path[menu1]}`)}>{menu1}</Nav.Link>

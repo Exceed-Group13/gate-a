@@ -19,7 +19,7 @@ const Register = () => {
             <input className='new-pass' placeholder="New Password"/>
             <br/>
             <br/>
-            <input type="submit" class="submit" value="Change Password"/>
+            <input type="submit" className="submit" value="Change Password"/>
           </form>
         </div>
       </div>

@@ -8,6 +8,7 @@ function ProfilePage() {
     const [minutes, setMinutes] = useState(0)
     const [seconds, setSeconds] = useState(0)
     const [data, setData] = useState(undefined)
+    const [delay, setDelay] = useState(0)
     const URL = "https://ecourse.cpe.ku.ac.th/exceed13/home"
     
     
@@ -32,10 +33,12 @@ function ProfilePage() {
     useEffect(()=>{
       fetch(URL).then((response) => response.json()).then((response) => {
         setData(response.result);
-        console.log(response.result)
-        console.log(data)
+        // console.log(response.result)
+        // console.log(data)
+        // console.log(data[0]["delay"] - Math.floor(data[0]["delay"] / 60) * 60, Math.floor(data[0]["delay"] / 60))
       })
-    });
+    },[]);
+    
     
 const onDurationChange = (duration) => {
     const { h, m, s } = duration;
@@ -44,16 +47,24 @@ const onDurationChange = (duration) => {
     setSeconds(s)
     manageDelay(convertToMin)
     // console.log(typeof(convertToMin))
+    // console.log(data[0]["delay"] - minutes * 60, Math.floor(data[0]["delay"] / 60))
   };
+  
+  function changeToSec() {
+    return data[0]["delay"] % 60
+  }
+  function changeToMin() {
+    return Math.floor(data[0]["delay"] / 60)
+  }
 
-    return (
+    return data && (
     <div className="reset">
       <div>
             <Menu menu1={"Home"} menu2={"Password"} />
       </div>
       <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'/>
       <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
-      <div class="component">
+      <div className="component">
         <br/>
         <br/>
         <h1 className="profile-text">Set Time</h1>
@@ -67,14 +78,14 @@ const onDurationChange = (duration) => {
         <center>
         <DurationPicker
           onChange={(du) => onDurationChange(du)}
-          initialDuration={{ minutes: 2, seconds: 3 }}
+          initialDuration={{ minutes: changeToMin(), seconds: changeToSec() }}
           noHours
         />
 
         <br/>
         </center>
 
-          {/* <input type="submit" class="submit" value="Submit" onClick={(du) => onDurationChange(du)}/> */}
+          {/* <input type="submit" className="submit" value="Submit" onClick={(du) => onDurationChange(du)}/> */}
 
         </form>
       </div>

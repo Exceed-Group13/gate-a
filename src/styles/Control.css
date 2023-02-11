@@ -12,7 +12,6 @@
 
 .doorDiv{
     padding-top: 5%;
-    /* background: rgb(49, 49, 57); */
     background: rgb(49, 49, 57);
     
 }
@@ -26,8 +25,6 @@
     background-image: -o-linear-gradient(#28D2DE 0%, #3C84AB 100%);
     background-image: linear-gradient(#28D2DE 0%, #362FD9 100%);
     font: 2.5vw Oswald !important;
-    /* font: 2.5vw Fredoka One !important;
-    letter-spacing: 1.5px; */
     /* background: linear-gradient(90deg, rgba(6,79,169,1) 0%, rgba(2,0,36,1) 30%, rgba(22,4,77,1) 58%, rgba(19,18,102,1) 75%, rgba(10,60,175,1) 87%, rgba(0,106,255,1) 100%, rgba(9,9,121,1) 100%); */
 }
 .navDiv {
@@ -39,11 +36,8 @@
     background-image: -o-linear-gradient(#28D2DE 0%, #3C84AB 100%);
     background-image: linear-gradient(#28D2DE 0%, #362FD9 100%);
     font: 1.5625rem Oswald;
-    /* font-family: 'Fredoka One', sans-serif;
-    font-size: 1.3rem; */
     color: #FFF;
-    text-transform: uppercase;
-    /* margin-bottom: 10%;    */
+    text-transform: uppercase;  
     /* note in web should be 2% */
     /* box-shadow: 0 8px 6px -6px rgb(0 0 0 / 70%); */
     /* -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255, 255, 255, 0.2))); */
@@ -51,7 +45,6 @@
     
     .demo{
     background: rgb(49, 49, 57);
-    /* font-family: 'Fredoka One', sans-serif; */
     }
     
     .switch-box {
@@ -73,20 +66,15 @@
     
     .open-text{
     color: #07dd40;
-    /* color: #17b656; */
-    /* padding-bottom: 5%; */
+
     font: 2.5rem Oswald;
-    /* letter-spacing: 2.5px; */
     text-transform: uppercase;
     text-align: center;
     }
     
     .close-text{
     color: #CF0A0A;
-    /* color: #f03612; */
-    /* padding-bottom: 5%; */
     font: 2.5rem Oswald;
-    /* letter-spacing: 2.5px; */
     text-transform: uppercase;
     text-align: center;
     }

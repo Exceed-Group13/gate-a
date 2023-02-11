@@ -144,7 +144,7 @@ const Changepass = () => {
         <h1 className='setH1'>Reset Password</h1>
         <br/>
         <br/>
-        <form class="form" method="post" onSubmit={(ev) => handleSubmit(ev)}>
+        <form className="form" method="post" onSubmit={(ev) => handleSubmit(ev)}>
           <input 
             className='old-pass' 
             type="password"
