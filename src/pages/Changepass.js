@@ -52,7 +52,7 @@ const Changepass = () => {
   const confirmPasswordEl = useRef()
 
   function checkOldPassword(oldPassword,e){
-    if ((e.target.value).length == 0 || e.target.value.charCodeAt((e.target.value).length-1) === 49 || e.target.value.charCodeAt((e.target.value).length-1) === 50 || e.target.value.charCodeAt((e.target.value).length-1) === 51) {
+    if ((e.target.value).length === 0 || e.target.value.charCodeAt((e.target.value).length-1) === 49 || e.target.value.charCodeAt((e.target.value).length-1) === 50 || e.target.value.charCodeAt((e.target.value).length-1) === 51) {
         setOldPassword(e.target.value)
     } else {
       setOldPassword(oldPassword)
@@ -60,7 +60,7 @@ const Changepass = () => {
   }
 
   function checkNewPassword(newPassword,e){
-    if ((e.target.value).length == 0 || e.target.value.charCodeAt((e.target.value).length-1) === 49 || e.target.value.charCodeAt((e.target.value).length-1) === 50 || e.target.value.charCodeAt((e.target.value).length-1) === 51) {
+    if ((e.target.value).length === 0 || e.target.value.charCodeAt((e.target.value).length-1) === 49 || e.target.value.charCodeAt((e.target.value).length-1) === 50 || e.target.value.charCodeAt((e.target.value).length-1) === 51) {
         setNewPassword(e.target.value)
     } else {
       setNewPassword(newPassword)
@@ -68,7 +68,7 @@ const Changepass = () => {
   }
 
   function checkConfirmPassword(confirmPassword,e){
-    if ((e.target.value).length == 0 || e.target.value.charCodeAt((e.target.value).length-1) === 49 || e.target.value.charCodeAt((e.target.value).length-1) === 50 || e.target.value.charCodeAt((e.target.value).length-1) === 51) {
+    if ((e.target.value).length === 0 || e.target.value.charCodeAt((e.target.value).length-1) === 49 || e.target.value.charCodeAt((e.target.value).length-1) === 50 || e.target.value.charCodeAt((e.target.value).length-1) === 51) {
         setConfirmPassword(e.target.value)
     } else {
       setConfirmPassword(confirmPassword)
@@ -110,7 +110,7 @@ const Changepass = () => {
         text: 'Please enter both the old password and the new password',
       })
     }
-    else if (oldPasswordEl.current.value == newPasswordEl.current.value) {
+    else if (oldPasswordEl.current.value === newPasswordEl.current.value) {
       Swal.fire({
         icon: 'error',
         title: 'Oops...',
@@ -124,13 +124,13 @@ const Changepass = () => {
         text: 'Successfully set your new password',
       })
     }
-    if (oldPasswordEl.current.value == Number(data[0]['pin'].join(''))) {
+    if ((oldPasswordEl.current.value === Number(data[0]['pin'].join(''))) && (newPasswordEl.current.value === confirmPasswordEl.current.value)) {
       manageKey(oldPasswordEl.current.value, newPasswordEl.current.value)
     } else {
       Swal.fire({
         icon: 'error',
-        title: 'Incorrect Old Password',
-        text: 'Please corrected your old password',
+        title: 'Incorrect Password',
+        text: 'Please corrected your password',
       })
     }
   }
