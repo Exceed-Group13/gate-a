@@ -32,6 +32,7 @@ body
   
   .form {
     width: 100%;
+    size: 10px;
   }
 
   .profile-text{
@@ -92,19 +93,20 @@ body
   }
   
   .rdp-picker {
-    background-color: rgb(49, 49, 57);
+    background-color: rgb(49, 49, 57) !important;
   }
   
   .rdp-masked-div {
-    color: white;
+    color: white !important;
   }
   
   .rdp-text-overlay {
-    color: #ffffff59;
+    color: #ffffff59 !important;
   }
   .profile-explain {
     font-size: small;
     color: white;
   }
   
+
 /* Register */
