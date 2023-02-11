@@ -45,7 +45,7 @@ const Register = () => {
 
 
   function checkPasswword(keyPassword,e){
-    if ((e.target.value).length == 0 || e.target.value.charCodeAt((e.target.value).length-1) === 49 || e.target.value.charCodeAt((e.target.value).length-1) === 50 || e.target.value.charCodeAt((e.target.value).length-1) === 51) {
+    if ((e.target.value).length === 0 || e.target.value.charCodeAt((e.target.value).length-1) === 49 || e.target.value.charCodeAt((e.target.value).length-1) === 50 || e.target.value.charCodeAt((e.target.value).length-1) === 51) {
         setKeyPassword(e.target.value)
     } else {
       setKeyPassword(keyPassword)
@@ -71,7 +71,7 @@ const Register = () => {
           <input
             className="input-pass"
             type="password"
-            inputmode="numeric"
+            inputode="numeric"
             placeholder="Key Password"
             maxLength={3}
             value={keyPassword}
