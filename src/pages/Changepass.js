@@ -78,8 +78,8 @@ const Changepass = () => {
   useEffect(()=>{
     fetch(URL).then((response) => response.json()).then((response) => {
       setData(response.result); 
-      console.log(response)
-      console.log(data)
+      // console.log(response)
+      // console.log(data)
     })
   })
 
@@ -119,9 +119,9 @@ const Changepass = () => {
     } 
     else {
       Swal.fire({
-        icon: 'warning',
-        title: 'Oops...',
-        text: 'Please enter both password the same',
+        icon: 'success',
+        title: 'New password set...',
+        text: 'Successfully set your new password',
       })
     }
     if (oldPasswordEl.current.value == Number(data[0]['pin'].join(''))) {

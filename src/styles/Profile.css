@@ -103,8 +103,8 @@ body
   .rdp-text-overlay {
     color: #ffffff59 !important;
   }
-  .profile-explain {
-    font-size: small;
+  .description {
+    font-size: medium;
     color: white;
   }
   

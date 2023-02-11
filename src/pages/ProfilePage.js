@@ -68,6 +68,7 @@ const onDurationChange = (duration) => {
         <br/>
         <br/>
         <h1 className="profile-text">Set Time</h1>
+        <p className='description'>Set your automatic close time</p>
         <br/>
         <img className='profile-img' src='https://lumiere-a.akamaihd.net/v1/images/open-uri20150422-20810-s1q5sn_ecb74152.jpeg?region=0,0,450,450'/>
         <br/>
