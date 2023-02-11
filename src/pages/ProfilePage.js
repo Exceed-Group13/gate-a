@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
 import DurationPicker from 'react-duration-picker'
 import '../styles/Profile.css'
+import Menu from "../components/Menu";
 
-
-
-   
 
 function ProfilePage( ) {
 
@@ -20,21 +18,23 @@ const onDurationChange = duration => {
   };
 
     return (
+    
     <div className="reset">
+      <div>
+            <Menu menu1={"Manage"} menu2={"Password"} />
+        </div>
       <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'/>
       <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
       <div class="component">
         <br/>
         <br/>
-        <h1 className="profile-text">Profile</h1>
+        <h1 className="profile-text">Set Time</h1>
         <br/>
         <img className='profile-img' src='https://lumiere-a.akamaihd.net/v1/images/open-uri20150422-20810-s1q5sn_ecb74152.jpeg?region=0,0,450,450'/>
-
         <br/>
         <br/>
         <form class="form" method="post" >
-          <input className='Old-Pass' placeholder="Name"/>
-        <br/>
+          {/* <input className='Old-Pass' placeholder="Name"/> */}
         <br/>
         <center>
         <DurationPicker

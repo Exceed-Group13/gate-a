@@ -1,7 +1,44 @@
-import React, { useState , useEffect, useRef } from 'react'
+// import React, { useState } from 'react'
+// import Swal from 'sweetalert2'
+// import '../styles/ResetPass.css'
 
+// const Changepass = () => {
+//   const [oldPassword, setOldPassword] = useState('')
+//   const [newPassword, setNewPassword] = useState('')
+//   const [confirmPassword, setConfirmPassword] = useState('')
+
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault()
+//     console.log(!"")
+
+//     if (!oldPassword || !newPassword) {
+//       Swal.fire({
+//         icon: 'error',
+//         title: 'Oops...',
+//         text: 'Please enter both the old password and the new password',
+//       })
+//       return
+//     } else if (newPassword !== confirmPassword) {
+//       Swal.fire({
+//         icon: 'warning',
+//         title: 'Oops...',
+//         text: 'Please enter both password the same',
+//       })
+//     }
+    
+//     else {
+//       Swal.fire({
+//         icon: 'success',
+//         title: 'Password Changed',
+//         text: 'Your password has been successfully changed',
+//       })
+//     }
+//   }
+
+import React, { useState , useEffect, useRef } from 'react'
 import Swal from 'sweetalert2'
-import '../styles/Register.css'
+import '../styles/ResetPass.css'
 
 const Changepass = () => {
   const [oldPassword, setOldPassword] = useState('')
@@ -82,10 +119,11 @@ const Changepass = () => {
     } 
     else {
       Swal.fire({
-        icon: 'success',
-        title: 'Password Changed',
-        text: 'Your password has been successfully changed',
+        icon: 'warning',
+        title: 'Oops...',
+        text: 'Please enter both password the same',
       })
+      return
     }
     if (oldPasswordEl.current.value == Number(data[0]['pin'].join(''))) {
       manageKey(oldPasswordEl.current.value, newPasswordEl.current.value)
@@ -102,8 +140,8 @@ const Changepass = () => {
     <div className="register">
       <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'/>
       <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
-      <div class="wrapper">
-        <h1>Reset Password</h1>
+      <div className="wrapper">
+        <h1 className='setH1'>Reset Password</h1>
         <br/>
 
         <br/>
@@ -135,9 +173,10 @@ const Changepass = () => {
             ref={confirmPasswordEl}
             maxLength={3}
           />
+      
         <br/>
         <br/>
-          <input type="submit" class="submit" value="Change Password"/>
+          <input type="submit" className="submit" value="Change Password"/>
         </form>
       </div>
     </div>
