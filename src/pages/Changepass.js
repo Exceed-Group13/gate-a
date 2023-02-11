@@ -35,7 +35,6 @@
 //       })
 //     }
 //   }
-
 import React, { useState , useEffect, useRef } from 'react'
 import Swal from 'sweetalert2'
 import '../styles/ResetPass.css'
@@ -123,7 +122,6 @@ const Changepass = () => {
         title: 'Oops...',
         text: 'Please enter both password the same',
       })
-      return
     }
     if (oldPasswordEl.current.value == Number(data[0]['pin'].join(''))) {
       manageKey(oldPasswordEl.current.value, newPasswordEl.current.value)
@@ -143,11 +141,10 @@ const Changepass = () => {
       <div className="wrapper">
         <h1 className='setH1'>Reset Password</h1>
         <br/>
-
         <br/>
         <form class="form" method="post" onSubmit={(ev) => handleSubmit(ev)}>
           <input 
-            className='input-name' 
+            className='old-pass' 
             type="password"
             placeholder="Old password"
             value={oldPassword}
@@ -156,7 +153,7 @@ const Changepass = () => {
             maxLength={3}
           />
           <input 
-            className='input-pass' 
+            className='new-pass' 
             type="password"
             placeholder="New Password"
             value={newPassword}
@@ -173,7 +170,6 @@ const Changepass = () => {
             ref={confirmPasswordEl}
             maxLength={3}
           />
-      
         <br/>
         <br/>
           <input type="submit" className="submit" value="Change Password"/>

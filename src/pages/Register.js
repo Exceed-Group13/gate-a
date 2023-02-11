@@ -63,7 +63,7 @@ const Register = () => {
         <br />
         <form className="form" method="post" onSubmit={handleSubmit}>
           <input
-            className="input_name"
+            className="input-name"
             placeholder="Key Name"
             value={keyName}
             onChange={(e) => setKeyName(e.target.value)}
