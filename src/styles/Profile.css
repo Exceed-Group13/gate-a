@@ -1,7 +1,7 @@
 body   
   .component {
-    width: 500px;
-    height: 680px;
+    width: 80%;
+    height: auto;
     margin: auto;
     border-radius: 20px;
     box-shadow: 0px 0px 10px #5b5b5d;
@@ -54,7 +54,7 @@ body
   }
 
   input[type=submit] {
-    width: 95%;
+    width: 90%;
     padding: 15px;
     border-radius: 5px;
     outline: none;
@@ -64,7 +64,7 @@ body
     background-image: -moz-linear-gradient(#28D2DE 0%, #85CDFD 100%);
     background-image: -o-linear-gradient(#28D2DE 0%, #3C84AB 100%);
     background-image: linear-gradient(#28D2DE 0%, #362FD9 100%);
-    font: 20px Oswald;
+    font: 1.2 Oswald;
     color: #FFF;
     text-transform: uppercase;
     text-shadow: #000 0px 1px 5px;
@@ -72,51 +72,36 @@ body
     opacity: 0.7;
     -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.7);
     -moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.7);
-    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 2% 8px;
     border-top: 1px solid rgba(255, 255, 255, 0.8) !important;
     -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255, 255, 255, 0.2)));
   }
-  
-  input:focus {
-    box-shadow: inset 4px 6px 10px -4px rgba(0, 0, 0, 0.7), 0 1px 1px -1px rgba(255, 255, 255, 0.3);
-    background: rgba(0, 0, 0, 0.3);
-    -webkit-transition: 1s ease;
-    -moz-transition: 1s ease;
-    -o-transition: 1s ease;
-    -ms-transition: 1s ease;
-    transition: 1s ease;
-  }
-  
-  input[type=submit]:hover {
-    opacity: 1;
-    cursor: pointer;
-  }
-  
+
   .optimize {
     position: fixed;
     right: 3%;
-    top: 0px;
+    top: 0%;
   }
-
+  
   .profile-img{
-    width: 200px;
-    height: 200px;
+    width: 20%;
+    height: 20%;
     border-radius: 50%;
     margin: 0 auto;
     display: block;
-    box-shadow: black 5px 5px 5px;
+    box-shadow: black 1% 1% 1%;
   }
-
+  
   .rdp-picker {
     background-color: rgb(49, 49, 57);
   }
-
+  
   .rdp-masked-div {
     color: white;
   }
-
+  
   .rdp-text-overlay {
     color: #ffffff59;
   }
-
+  
 /* Register */

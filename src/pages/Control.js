@@ -53,7 +53,7 @@ const Control = (props) => {
   }
 
   function alertinvalidPassword(alert) {
-    if (alert){
+    if (!alert){
       clearInterval(timer)
       Swal.fire({
         icon: 'warning',
@@ -89,6 +89,22 @@ const Control = (props) => {
       .then((response) => console.log(response));
   }
 
+  // return data && (
+  //   <>
+  //   <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css' />
+  //   <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+  //   <div className="demo">
+  //           <Menu menu1={"Manage"} menu2={"Password"} />
+  //       <div className="doorDiv">
+  //         <h1 className={data[0]['state'] ? "open-text" : "close-text"}>{data[0]['state'] ? "Open" : "Close"}</h1>
+  //       </div>
+  //       <div className="switch-box">
+  //           <Button className="switch-but" size="lg" variant="primary" onClick={() => manageSwitch("true", data[0]['house_name'])}>OPEN</Button>{' '}
+  //           <Button className="switch-but" size="lg" variant="primary" onClick={() => manageSwitch("false", data[0]['house_name'])}>OFF</Button>{' '}
+  //       </div>
+  //     </div>
+  //   </>
+  // );
   return data && (
     <>
     <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css' />
@@ -97,14 +113,16 @@ const Control = (props) => {
             <Menu menu1={"Manage"} menu2={"Password"} />
         <div className="doorDiv">
           <h1 className={data[0]['state'] ? "open-text" : "close-text"}>{data[0]['state'] ? "Open" : "Close"}</h1>
+          {data[0]['state'] ? <img src="https://i.ibb.co/FqMKGR3/Untitled-design-2.png" alt="Open door" style={{width:'50%'}} /> : <img src="https://i.ibb.co/QMRV82x/Untitled-design-3.png" alt="Close door" style={{width:'50%'}}/>}
         </div>
         <div className="switch-box">
-            <Button className="switch-but" size="lg" variant="primary" onClick={() => manageSwitch("true", data[0]['house_name'])}>OPEN</Button>{' '}
+            <Button className="switch-but" style={{margin:'18px'}} size="lg" variant="primary" onClick={() => manageSwitch("true", data[0]['house_name'])}>OPEN</Button>{' '}
             <Button className="switch-but" size="lg" variant="primary" onClick={() => manageSwitch("false", data[0]['house_name'])}>OFF</Button>{' '}
         </div>
       </div>
     </>
   );
+  
 };
 
 export default Control;
