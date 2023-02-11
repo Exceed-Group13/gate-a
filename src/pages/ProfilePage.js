@@ -64,31 +64,33 @@ const onDurationChange = (duration) => {
       </div>
       <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'/>
       <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
-      <div className="component">
-        <br/>
-        <br/>
-        <h1 className="profile-text">Set Time</h1>
-        <p className='description'>Set your automatic close time</p>
-        <br/>
-        <img className='profile-img' src='https://lumiere-a.akamaihd.net/v1/images/open-uri20150422-20810-s1q5sn_ecb74152.jpeg?region=0,0,450,450'/>
-        <br/>
-        <br/>
-        <form className="form" method="post" >
-          {/* <input className='Old-Pass' placeholder="Name"/> */}
-        <br/>
-        <center>
-        <DurationPicker
-          onChange={(du) => onDurationChange(du)}
-          initialDuration={{ minutes: changeToMin(), seconds: changeToSec() }}
-          noHours
-        />
+      <div className='box-lg'>
+        <div className="component">
+          <br/>
+          <br/>
+          <h1 className="profile-text">Set Time</h1>
+          <p className='description'>Set your automatic close time</p>
+          <br/>
+          <img className='profile-img' src='https://lumiere-a.akamaihd.net/v1/images/open-uri20150422-20810-s1q5sn_ecb74152.jpeg?region=0,0,450,450'/>
+          <br/>
+          <br/>
+          <form className="form" method="post" >
+            {/* <input className='Old-Pass' placeholder="Name"/> */}
+          <br/>
+          <center>
+          <DurationPicker
+            onChange={(du) => onDurationChange(du)}
+            initialDuration={{ minutes: changeToMin(), seconds: changeToSec() }}
+            noHours
+          />
 
-        <br/>
-        </center>
+          <br/>
+          </center>
 
-          {/* <input type="submit" className="submit" value="Submit" onClick={(du) => onDurationChange(du)}/> */}
+            {/* <input type="submit" className="submit" value="Submit" onClick={(du) => onDurationChange(du)}/> */}
 
-        </form>
+          </form>
+        </div>
       </div>
     </div>
     )
