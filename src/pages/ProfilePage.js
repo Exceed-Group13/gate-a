@@ -9,31 +9,34 @@ function ProfilePage() {
     const [seconds, setSeconds] = useState(0)
     const [data, setData] = useState(undefined)
     const URL = "https://ecourse.cpe.ku.ac.th/exceed13/home"
-
+    
+    
     function manageDelay(delay) {
-      const requestOptions = {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          house_name: data[0]['house_name'],
-          delay: delay
-        }),
-      };
-  
-      fetch("https://ecourse.cpe.ku.ac.th/exceed13/setting", requestOptions)
+      if (data) {
+        const requestOptions = {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            house_name: data[0]['house_name'],
+            delay: delay
+          }),
+        };
+        
+        fetch("https://ecourse.cpe.ku.ac.th/exceed13/setting", requestOptions)
         .then((response) => response.json())
         .then((response) => console.log(response))
         .catch((err) => console.log(err))
+      }
     };
-
+    
     useEffect(()=>{
       fetch(URL).then((response) => response.json()).then((response) => {
         setData(response.result);
-        console.log(response)
+        console.log(response.result)
         console.log(data)
       })
     });
-
+    
 const onDurationChange = (duration) => {
     const { h, m, s } = duration;
     const convertToMin = ((duration.minutes * 60) + duration.seconds)
@@ -58,11 +61,12 @@ const onDurationChange = (duration) => {
         <img className='profile-img' src='https://lumiere-a.akamaihd.net/v1/images/open-uri20150422-20810-s1q5sn_ecb74152.jpeg?region=0,0,450,450'/>
         <br/>
         <br/>
-        <form class="form" method="post" >
+        <form className="form" method="post" >
           {/* <input className='Old-Pass' placeholder="Name"/> */}
         <br/>
         <center>
         <DurationPicker
+          onChange={(du) => onDurationChange(du)}
           initialDuration={{ minutes: 2, seconds: 3 }}
           noHours
         />
@@ -70,7 +74,7 @@ const onDurationChange = (duration) => {
         <br/>
         </center>
 
-          <input type="submit" class="submit" value="Submit" onClick={(du) => onDurationChange(du)}/>
+          {/* <input type="submit" class="submit" value="Submit" onClick={(du) => onDurationChange(du)}/> */}
 
         </form>
       </div>
