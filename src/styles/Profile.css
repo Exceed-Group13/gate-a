@@ -7,7 +7,6 @@ body
     box-shadow: 0px 0px 10px #5b5b5d;
   }
   .reset{
-    margin-top: 2%;
     background: rgb(49, 49, 57);
   }
   html{
@@ -102,6 +101,10 @@ body
   
   .rdp-text-overlay {
     color: #ffffff59;
+  }
+  .profile-explain {
+    font-size: small;
+    color: white;
   }
   
 /* Register */

@@ -10,12 +10,10 @@ box-shadow: 0px 0px 10px #5b5b5d;
 
 .wrapper {
 height: 44%;
-margin-left: 20%;
-margin-right: 20%;
+margin-left: 10%;
+margin-right: 10%;
 }
-.reset{
-margin-top: 10%;
-}
+
 .App{
   background: rgb(49, 49, 57);
 

@@ -1,28 +1,53 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import DurationPicker from 'react-duration-picker'
 import '../styles/Profile.css'
 import Menu from "../components/Menu";
 
 
-function ProfilePage( ) {
-
+function ProfilePage() {
     const [minutes, setMinutes] = useState(0)
     const [seconds, setSeconds] = useState(0)
+    const [data, setData] = useState(undefined)
+    const URL = "https://ecourse.cpe.ku.ac.th/exceed13/home"
 
-    
-const onDurationChange = duration => {
-    const { _,  m, s } = duration;
+    function manageDelay(delay) {
+      const requestOptions = {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          house_name: data[0]['house_name'],
+          delay: delay
+        }),
+      };
+  
+      fetch("https://ecourse.cpe.ku.ac.th/exceed13/setting", requestOptions)
+        .then((response) => response.json())
+        .then((response) => console.log(response))
+        .catch((err) => console.log(err))
+    };
+
+    useEffect(()=>{
+      fetch(URL).then((response) => response.json()).then((response) => {
+        setData(response.result);
+        console.log(response)
+        console.log(data)
+      })
+    });
+
+const onDurationChange = (duration) => {
+    const { h, m, s } = duration;
+    const convertToMin = ((duration.minutes * 60) + duration.seconds)
     setMinutes(m)
     setSeconds(s)
-
+    manageDelay(convertToMin)
+    // console.log(typeof(convertToMin))
   };
 
     return (
-    
     <div className="reset">
       <div>
-            <Menu menu1={"Manage"} menu2={"Password"} />
-        </div>
+            <Menu menu1={"Home"} menu2={"Password"} />
+      </div>
       <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'/>
       <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
       <div class="component">
@@ -38,14 +63,14 @@ const onDurationChange = duration => {
         <br/>
         <center>
         <DurationPicker
-           onChange={onDurationChange}
-           noHours
+          initialDuration={{ minutes: 2, seconds: 3 }}
+          noHours
         />
 
         <br/>
         </center>
 
-          <input type="submit" class="submit" value="Submit"/>
+          <input type="submit" class="submit" value="Submit" onClick={(du) => onDurationChange(du)}/>
 
         </form>
       </div>

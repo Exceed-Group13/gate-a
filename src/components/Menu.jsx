@@ -10,6 +10,12 @@ import { useNavigate } from "react-router-dom";
 
 const Menu = ({ menu1="Manage", menu2="Password" }) => {
     const navigate = useNavigate();
+    const path = {
+      "Manage" : "profile",
+      "Password" : "changepass",
+      "Home" : "",
+
+    }
     return (
         <div className="navDiv">
           <Navbar variant="dark">
@@ -18,8 +24,8 @@ const Menu = ({ menu1="Manage", menu2="Password" }) => {
               <img src="https://i.ibb.co/TMPSnkm/GATE-A-125-125-px-4.png" style={{width:'60%', float: 'left'}}></img>
               </Nav.Link>
               <Nav className="me-auto">
-                <Nav.Link onClick={()=> navigate('/profile')}>{menu1}</Nav.Link>
-                <Nav.Link onClick={()=> navigate('/resetpass')}>{menu2}</Nav.Link>
+                <Nav.Link onClick={()=> navigate(`/${path[menu1]}`)}>{menu1}</Nav.Link>
+                <Nav.Link onClick={()=> navigate(`/${path[menu2]}`)}>{menu2}</Nav.Link>
               </Nav>
             </Container>
           </Navbar>

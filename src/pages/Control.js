@@ -117,7 +117,7 @@ const Control = (props) => {
         </div>
         <div className="switch-box">
             <Button className="switch-but" style={{margin:'18px'}} size="lg" variant="primary" onClick={() => manageSwitch("true", data[0]['house_name'])}>OPEN</Button>{' '}
-            <Button className="switch-but" size="lg" variant="primary" onClick={() => manageSwitch("false", data[0]['house_name'])}>OFF</Button>{' '}
+            <Button className="switch-but" size="lg" variant="primary" onClick={() => manageSwitch("false", data[0]['house_name'])}>CLOSE</Button>{' '}
         </div>
       </div>
     </>

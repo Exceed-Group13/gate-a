@@ -37,6 +37,7 @@
 //   }
 import React, { useState , useEffect, useRef } from 'react'
 import Swal from 'sweetalert2'
+import Menu from '../components/Menu'
 import '../styles/ResetPass.css'
 
 const Changepass = () => {
@@ -136,6 +137,7 @@ const Changepass = () => {
 
   return (
     <div className="register">
+      <Menu menu1={"Home"} menu2={"Manage"} />
       <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'/>
       <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
       <div className="wrapper">
