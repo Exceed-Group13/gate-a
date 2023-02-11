@@ -1,3 +1,4 @@
+import { keyboard } from '@testing-library/user-event/dist/keyboard';
 import React, { useState } from 'react';
 import Swal from 'sweetalert2';
 import '../styles/Register.css';
@@ -42,6 +43,16 @@ const Register = () => {
     }
   };
 
+
+  function checkPasswword(keyPassword,e){
+    if ((e.target.value).length == 0 || e.target.value.charCodeAt((e.target.value).length-1) === 49 || e.target.value.charCodeAt((e.target.value).length-1) === 50 || e.target.value.charCodeAt((e.target.value).length-1) === 51) {
+        setKeyPassword(e.target.value)
+    } else {
+      setKeyPassword(keyPassword)
+    }
+  }
+
+  console.log(keyPassword)
   return (
     <div className="register">
       <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css' />
@@ -52,7 +63,7 @@ const Register = () => {
         <br />
         <form className="form" method="post" onSubmit={handleSubmit}>
           <input
-            className="input_name"
+            className="input-name"
             placeholder="Key Name"
             value={keyName}
             onChange={(e) => setKeyName(e.target.value)}
@@ -61,12 +72,10 @@ const Register = () => {
             className="input-pass"
             type="password"
             inputmode="numeric"
-            pattern="[1-3]{3}"
             placeholder="Key Password"
+            maxLength={3}
             value={keyPassword}
-            maxLength="3"
-            minLength="3"
-            onChange={(e) => setKeyPassword(e.target.value)}
+            onChange={(e) => checkPasswword(keyPassword,e)}
           />
           <br />
           <br />

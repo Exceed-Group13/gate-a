@@ -45,7 +45,7 @@ margin-bottom: 3%;
 width: 100%;
 }
 
-.old-Pass, .new-Pass{
+.old-pass, .new-pass, .input-confirm{
   width: 80%;
   padding: 1.5% 0px 1.5% 8px;
   border-radius: 5px;
