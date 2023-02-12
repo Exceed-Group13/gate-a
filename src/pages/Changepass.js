@@ -124,7 +124,7 @@ const Changepass = () => {
         text: 'Successfully set your new password',
       })
     }
-    if ((oldPasswordEl.current.value === Number(data[0]['pin'].join(''))) && (newPasswordEl.current.value === confirmPasswordEl.current.value)) {
+    if ((oldPasswordEl.current.value == Number(data[0]['pin'].join(''))) && (newPasswordEl.current.value == confirmPasswordEl.current.value)) {
       manageKey(oldPasswordEl.current.value, newPasswordEl.current.value)
     } else {
       Swal.fire({
